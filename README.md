@@ -12,9 +12,22 @@
 
 # Instalando
 
-Assumindo que voce tem o Ruby e Git instalados:
+Por enquanto essas intrucoes sao para MacOSX e Linux; estarei
+trabalhando em formatos para Windows;todos comandos abaixo sao
+utilizados no prompt de comando (terminal)
+
+Assumindo que voce nao tem o Ruby,
+
+    $ \curl -sSL https://get.rvm.io | bash -s stable
+
+Depois de instalado, verifique se o gem Rake esta instalado:
+
+    $ gem list
+    $ rake --version
 
 ## Clonar o projeto
+
+Assumindo que vc possui [git](http://www.git-scm.com/):
 
     $ git clone https://www.github.com/jahpd/rake-abnTeX.git
     $ cd rake-abnTeX
@@ -69,7 +82,15 @@ Resumo.yml:
 
     ---
     Resumo: "\\blindtext"
-      
+
+O comando acima gera uma string `"\blindtext"` no LaTeX gerado; isso
+gera uma sequencia de strings em latim; so serve para dar corpo ao
+texto. De fato, nos arquivos `.yml` para compilar comandos LaTeX eh
+necessario inserir dupla barra (TODO isso eh incoveniente)
+
+Abaixo mostramos como inserir mais comandos, como citacao e textos
+padrao maiores;
+
 Introducao.yml:
 
     ---
@@ -94,6 +115,19 @@ Se der algo errado, o que pode dar na mesma:
     $ pdflatex teste.tex
 
 Verifique o arquivo .pdf para ver se esta tudo OK
+
+# Pacotes utilizados e opcoes geradas
+
+    \usepackage[utf8]{inputenc}		              % determina a codificação utiizada (conversão automática dos acentos)
+    \usepackage[brazil]{babel}	                  % idiomas
+    \usepackage{hyperref}  			              % controla a formação do índice
+    \usepackage{parskip}
+    \usepackage[alf]{abntex2cite}                 % Citações padrão ABNT
+    \usepackage[brazilian,hyperpageref]{backref}  % indique quantas vezes e em quais páginas a citação ocorreu)
+    \usepackage{draftcopy}                        % Remove this after generate ultimate version of document
+    \usepackage{blindtext}                        % Remove this after
+    generate with rake
+
 
   
 
