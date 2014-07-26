@@ -1,0 +1,25 @@
+---
+template: article
+versao: "0.0.1"
+titulo: "Artigo gerado teste com rake-\\abnTeX}"
+autor: 
+  nome: "Autor"
+  email: "autor@mail.com"
+  nota: "Alguma nota sobre o autor e a pesquisa"
+instituicao:
+  nome: Universidade Publica
+  abreviacao: UP
+  faculdade:
+    nome: Faculdade Publica
+    abreviacao: FP
+  programa: Programa de Estudos
+orientador:
+  aparece: Orientador
+  nome: Prof. Dr. Orientador
+coorientador:
+  aparece: Co-Orientador
+  nome: Prof. Dr. Co-Orientador
+tipotrabalho: Trabalho academico
+palavraschave: [palavra, chave]
+secoes: [Introducao, Exemplos, Conclusao]
+bibliografia: teste

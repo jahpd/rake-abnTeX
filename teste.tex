@@ -1,0 +1,64 @@
+%% Template gerado com ruby-abnTeX v0.0.1
+\documentclass[12pt, article, a4paper, brazil]{abntex2}\usepackage[T1]{fontenc}		      % seleção de códigos de fonte.
+\usepackage[utf8]{inputenc}		      % determina a codificação utiizada (conversão automática dos acentos)
+\usepackage[brazil]{babel}	              % idiomas
+\usepackage{hyperref}  			      % controla a formação do índice
+\usepackage{parskip}
+\usepackage[alf]{abntex2cite}                 % Citações padrão ABNT
+\usepackage[brazilian,hyperpageref]{backref}  % indique quantas vezes e em quais páginas a citação ocorreu)
+\usepackage{draftcopy}                        % Remove this after generate ultimate version of document
+\usepackage{blindtext}                        % Remove this after generate with rake
+
+\changes{Vers\~{a}o inicial }{dia: 2014-07-25 22:41:13 -0300 }{v0.0.1}
+\titulo{Artigo gerado teste com rake-\abnTeX} \thanks{\imprimirtipotrabalho desenvolvido com \LaTeX; formatado com \abnTeX}}
+\autor{Autor \url{autor@mail.com} \thanks{Alguma nota sobre o autor e a pesquisa}}
+\instituicao{Universidade Publica -- UP
+  \par 
+  Faculdade Publica -- FP
+  \par
+  Programa de Estudos
+}
+\tipotrabalho{Trabalho academico}
+\orientador[Orientador]{Prof. Dr. Orientador}
+\coorientador[Co-Orientador]{Prof. Dr. Co-Orientador}
+\data{\today}\makeatletter
+\hypersetup{
+  pdftitle={\@title},
+  pdfauthor={\@author},
+  pdfsubject={\@imprimirpreambulo},
+  pdfkeywords={palavra}{chave},
+  pdfcreator={\LaTeX with \abnTeX2},
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+\makeatother
+
+\begin{document}
+\maketitle
+
+\imprimirinstituicao
+
+\imprimirorientadorRotulo \imprimirorientador
+
+\imprimircoorientadorRotulo \imprimircoorientador
+
+\begin{abstract}
+  \blindtext
+\end{abstract}
+
+\section{Introducao}
+  Escreva aqui algo sobre Introducao \cite{exemplo_artigo_2014}; voc\^e pode usar comandos \LaTeX e \abnTeX \cite{abntex_tutorial_2014}} com a dupla barra \Blindtext 
+  \Blindtext  %% Remova isso!!!!
+
+\section{Exemplos}
+  Escreva aqui algo sobre Exemplos \cite{exemplo_artigo_2014}; voc\^e pode usar comandos \LaTeX e \abnTeX \cite{abntex_tutorial_2014}} com a dupla barra \Blindtext 
+  \Blindtext  %% Remova isso!!!!
+
+\section{Conclusao}
+  Escreva aqui algo sobre Conclusao \cite{exemplo_artigo_2014}; voc\^e pode usar comandos \LaTeX e \abnTeX \cite{abntex_tutorial_2014}} com a dupla barra \Blindtext 
+  \Blindtext  %% Remova isso!!!!
+
+\bibliography{teste}
+\end{document}
